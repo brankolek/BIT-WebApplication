@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<style>
+    /* .hide {
+        display: none;
+    } */
+
+    script~div {
+        display: none;
+    }
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li id="homeH" onclick="navigate('home')" class="nav-item  nav-link">
+                    Home
+                </li>
+                <li id="aboutH" onclick="navigate('about')" class="nav-item nav-link">
+                    About
+                </li>
+                <li id="aboutH" onclick="navigateTemplate('PROBA')" class="nav-item nav-link">
+                    TEMPLATE
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+
+    <div id="main" class="container-fluid">
+
+
+
+
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+    <script src="./tepmlate.js"></script>
+
+    <script>
+        // $(document).ready(function () {
+        //     $("#homeDiv").clone().appendTo("#main")
+        // });
+
+
+
+        // $("#home").on("click", () => {
+
+        // let about = $("#aboutDiv").toggleClass("hide");
+        // let home = $("#homeDiv").toggleClass("hide");
+
+        // $("#aboutDiv").remove();
+
+        //     $("#main").empty();
+        //     $("#homeDiv").clone().appendTo("#main")
+
+
+
+        // })
+        // $("#about").on("click", () => {
+
+        //     // let about = $("#aboutDiv").toggleClass("hide");
+        //     // let home = $("#homeDiv").toggleClass("hide");
+
+        //     $("#main").empty();
+        //     $("#aboutDiv").clone().appendTo("#main")
+        // })
+    </script>
+
+</body>
+
+<div id="home">
+
+    <h1>WHO WE ARE </h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt illo est voluptatibus temporibus porro aperiam et ratione
+        eius vitae, in laudantium, deserunt voluptatum, omnis autem repellat id veritatis explicabo neque.</p>
+    <h2>Mission</h2>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum quidem error vitae modi quaerat libero provident amet maiores
+        delectus. Quisquam ipsam fugit animi iure quasi, ea quibusdam tenetur ratione! Ratione!</p>
+
+    <img src="" alt="">
+</div>
+
+<div id="about">
+
+    <h1>About</h1>
+</div>
+
+
+</html>

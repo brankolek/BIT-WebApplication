@@ -16,15 +16,17 @@ const hide = (email) => {
 
 }
 const ItemCard = (props) => {
+
+    let cls = props.usr.gender === "male" ? "card col-4" : "card col-4 red"
     return (
 
-        <div class="card col-4">
+        <div class={cls}>
 
-            <img class="card-img-top" src={props.usr.picture.large} alt="Card image cap" />
+            <img class="card-img-top" src={props.usr.largePic} alt="Card image cap" />
             <div class="card-body">
 
                 <p class="card-text">email: {hide(props.usr.email)}</p>
-                <p class="card-text">Date od birth: {props.usr.dob}</p>
+                <p class="card-text">Date od birth: {props.usr.dateOfBirth}</p>
 
             </div>
         </div>

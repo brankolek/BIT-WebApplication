@@ -81,3 +81,11 @@
 imgCard {
   width: 200px;
 }
+
+.headerButton {
+  display: inline-block;
+}
+
+.red {
+  background-color: red;
+}

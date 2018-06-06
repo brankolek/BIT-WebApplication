@@ -6,6 +6,7 @@ import './App.css';
 import ItemCard from "./itemCard"
 import ItemList from "./ItemList"
 import usersData from "../../services/userService"
+import NoUsers from './noUsers';
 
 
 class UserList extends Component {
@@ -17,51 +18,48 @@ class UserList extends Component {
         };
     }
 
-    // componentDidMount() {
-    //     usersData.getData().then((data) => {
-    //         this.setState({
-    //             users: data
-    //         })
-    //     })
-    // }
 
-    // change = () => {
-    //     this.setState({
-    //         selected: !this.state.selected
-    //     })
-    // }
+    renderList() {
+        const array = this.props.users.filter((user) => {
+
+            if (this.props.searchString === "") {
+
+                return true
+            } else {
+                return user.name.includes(this.props.searchString)
+
+            }
+
+        }).map((user, i, arr) => {
+
+            if (this.props.selected) {
+
+                return <ItemList usr={user} />
+
+            } else {
+
+                return <ItemCard usr={user} />
+
+            }
+        })
+
+        if (array.length === 0) {
+
+            return <NoUsers />
+        } else {
+            return array;
+        }
+    }
 
     render() {
         return (
 
             <div className="container" >
-                <div className="row">
-                    <input type="search" />
-                </div>
+
                 <div className="row">
 
-                    {this.props.users.map(user => {
 
-                        if (this.props.selected) {
-
-                            return <ItemList usr={user} />
-
-
-
-                        } else {
-
-                            return <ItemCard usr={user} />
-
-
-                        }
-
-
-
-
-                    }
-
-
-                    )}
+                    {this.renderList()}
 
                 </div>
 

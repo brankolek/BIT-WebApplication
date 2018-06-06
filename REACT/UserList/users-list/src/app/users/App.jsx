@@ -8,6 +8,9 @@ import Header from './header';
 import Footer from './footer';
 import UserList from "./userList"
 import usersData from "../../services/userService"
+import SearchBar from './searchBar';
+import About from '../about/aboutPage';
+import { Switch, Route, Redirect } from "react-router-dom";
 
 
 class App extends Component {
@@ -15,10 +18,27 @@ class App extends Component {
     super(props);
     this.state = {
       users: [],
-      selected: false,
-      counter: 0
+      selected: localStorage.getItem("shape"),
+      counter: 0,
+      searchString: "",
+
     };
   }
+
+
+  handlerSearch = (event) => {
+
+
+    this.setState({
+
+      searchString: event.target.value
+    })
+
+
+  }
+
+
+
 
   refresh = () => {
     this.load();
@@ -29,14 +49,15 @@ class App extends Component {
         users: data
       })
     })
-
-
   }
+
+
+
   componentDidMount() {
     this.load()
   }
   change = () => {
-
+    localStorage.setItem("shape", !this.state.selected)
     this.setState((prevState) => {
 
       return {
@@ -52,7 +73,16 @@ class App extends Component {
       <div>
 
         <Header change={this.change} selected={this.state.selected} refresh={this.refresh} />
-        <UserList selected={this.state.selected} users={this.state.users} />
+
+        <Switch>
+
+          <Route exact path='/'
+            render={(props) => <UserList {...props} selected={this.state.selected} users={this.state.users} searchString={this.state.searchString} />}
+          />
+
+          <Route path='/about' component={About} />
+        </Switch>
+
 
         <Footer />
 

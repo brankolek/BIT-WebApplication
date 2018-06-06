@@ -2,6 +2,7 @@ import React, {
     Component
 } from 'react';
 import './App.css';
+import SearchBar from './searchBar';
 
 
 const Header = (props) => {
@@ -15,10 +16,10 @@ const Header = (props) => {
 
                 <p className="col-10">Bit Persons</p>
 
-                <i class="fa fa-repeat col-1" onClick={props.refresh}></i>
+                <i class="fa fa-repeat col-1 my-auto" onClick={props.refresh}></i>
 
 
-                {props.selected ? <i onClick={props.change} className="col-1 align-middle fa fa-th" ></i> : <i onClick={props.change} className="col-1 align-middle fa fa-th-list" ></i>}
+                {props.selected ? <i onClick={props.change} className="col-1 fa fa-th my-auto" ></i> : <i onClick={props.change} className="col-1 my-auto fa fa-th-list" ></i>}
 
 
 

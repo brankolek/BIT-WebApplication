@@ -87,5 +87,11 @@ imgCard {
 }
 
 .red {
-  background-color: red;
+  background-color: rgb(255, 220, 220);
+}
+
+.searchBar {
+  width: 1145px !important;
+  position: relative;
+  left: 293px;
 }

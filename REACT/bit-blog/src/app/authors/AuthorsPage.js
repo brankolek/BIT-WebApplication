@@ -1,15 +1,47 @@
-import React from 'react';
-import { Link } from "react-router-dom";
+import React, { Component } from 'react';
+import authorsService from '../../services/authorsService';
+import AuthorsList from "./AuthorsList";
 
-const Authors = () => (
-    <div>
 
-        <h1>Authors</h1>
-        <Link to="/authors/id"> <div>Name Surname</div></Link>
-        <div>Name Surname</div>
-        <div>Name Surname</div>
-        <div>Name Surname</div>
-    </div>
-);
 
-export default Authors;
+
+
+class Author extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            authors: []
+        };
+    }
+    componentDidMount() {
+
+        authorsService.getdata().then(data => {
+            this.setState(
+                {
+                    authors: data
+                }
+            )
+
+
+        })
+
+    }
+    render() {
+        return (
+
+            <div >
+
+
+                <h1 className="text-center">AUTHORS</h1>
+                <AuthorsList
+
+                    authors={this.state.authors}
+                />
+
+            </div>
+
+        );
+    }
+}
+
+export default Author;

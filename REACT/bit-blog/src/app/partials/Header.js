@@ -3,19 +3,21 @@ import { Link } from "react-router-dom";
 
 
 
+
+
 const Header = () => (
 
     <nav class="navbar navbar-light bg-warning">
 
-        <p>RND Blog</p>
-        <ul class="navbar-nav ">
-            <li class="nav-item active">
+        <p>BIT BLOG</p>
+        <ul class="nav navbar-nav  ">
+            <li class="nav-item links">
                 <Link to="/">Home</Link>
             </li>
-            <li class="nav-item">
+            <li class="nav-item links">
                 <Link to="/authors">Authors</Link>
             </li>
-            <li class="nav-item">
+            <li class="nav-item links">
                 <Link to="/about">About</Link>
             </li>
         </ul>

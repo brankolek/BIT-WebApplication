@@ -1,4 +1,4 @@
-const blogsUrl = "https://jsonplaceholder.typicode.com/";
+const blogsUrl = "https://jsonplaceholder.typicode.com";
 
 export {
     blogsUrl

@@ -20,7 +20,7 @@ class App extends Component {
                     <Route exact path="/authors" component={AuthorsPage} />
                     <Route exact path="/about" component={AboutPage} />
                     <Route exact path="/posts" component={SinglePostPage} />
-                    <Route exact path="/authors/id" component={AuthorPage} />
+                    <Route exact path="/authors/:id" component={AuthorPage} />
 
 
                 </Switch>

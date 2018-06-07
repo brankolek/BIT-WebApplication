@@ -8,15 +8,19 @@ class SearchBar extends Component {
   }
   render() {
     return (
-      <form className="form-inline my-5 my-lg-0">
-        <input
-          className="form-control mr-sm-2 my-3 searchBar"
-          type="search"
-          placeholder="Search"
-          aria-label="Search"
-          onChange={this.props.handlerSearch}
-        />
-      </form>
+      <div className="row">
+        <div className="col-12">
+          <form className="form-inline my-5 my-lg-0">
+            <input
+              className="form-control mr-sm-2 my-3 searchBar"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+              onChange={this.props.handlerSearch}
+            />
+          </form>
+        </div>
+      </div>
     );
   }
 }

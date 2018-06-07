@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import Header from "../partials/header";
-import HeaderAbout from "../partials/headerAbout";
+import HeaderAbout from "../partials/HeaderAbout";
 
 class AboutPage extends Component {
   constructor(props) {

@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 import "../../styles/App.css";
 
-import ItemCard from "./itemCard";
+import ItemCard from "./ItemCard";
 import ItemList from "./ItemList";
-import usersData from "../../services/userService";
-import NoUsers from "./noUsers";
+
+import NoUsers from "./NoUsers";
+import SearchBar from "./SearchBar";
+
 
 class UserList extends Component {
   constructor(props) {
@@ -41,6 +43,7 @@ class UserList extends Component {
   render() {
     return (
       <div className="container">
+        <SearchBar handlerSearch={this.props.handlerSearch} />
         <div className="row">{this.renderList()}</div>
       </div>
     );

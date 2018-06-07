@@ -2,13 +2,12 @@ import React, { Component } from "react";
 
 import "../../styles/App.css";
 
-import Header from "../partials/header";
-import Footer from "../partials/footer";
-import UserList from "./userList";
-import usersData from "../../services/userService";
-import SearchBar from "./searchBar";
-import About from "../about/aboutPage";
-import { Switch, Route, Redirect } from "react-router-dom";
+import Header from "../partials/Header";
+
+import UserList from "./UserList";
+import UsersService from "../../services/UserService";
+import SearchBar from "./SearchBar";
+
 
 class UsersPage extends Component {
   constructor(props) {
@@ -31,7 +30,7 @@ class UsersPage extends Component {
     this.load();
   };
   load() {
-    return usersData.getData().then(data => {
+    return UsersService.getData().then(data => {
       this.setState({
         users: data
       });
@@ -58,12 +57,13 @@ class UsersPage extends Component {
           selected={this.state.selected}
           refresh={this.refresh}
         />
-        <SearchBar handlerSearch={this.handlerSearch} />
+        {/* <SearchBar handlerSearch={this.handlerSearch} /> */}
 
         <UserList
           selected={this.state.selected}
           users={this.state.users}
           searchString={this.state.searchString}
+          handlerSearch={this.handlerSearch}
         />
       </div>
     );

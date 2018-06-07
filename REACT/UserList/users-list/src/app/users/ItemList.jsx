@@ -1,6 +1,6 @@
-import React, { Component } from "react";
+import React from "react";
 import "../../styles/App.css";
-import PropTypes from "prop-types";
+
 
 // const itemListclass = (props) => {
 

@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import Switch from "react-router-dom/Switch";
 import Route from "react-router-dom/Route";
-import Footer from "./partials/footer";
-import AboutPage from "./about/aboutPage";
-import UsersPage from "./users/Users";
+import Footer from "./partials/Footer";
+import AboutPage from "./about/AboutPage";
+import UsersPage from "./users/UsersPage";
 
 class App extends Component {
   constructor(props) {

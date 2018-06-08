@@ -7,7 +7,9 @@ const HeaderAbout = () => {
     <div className="container-fluid">
       <div className="header row">
         <p className="col-10">Bit Persons</p>
-        <Link to="/" className="col-2">Users</Link>
+        <Link to="/" className="col-2">
+          Users
+        </Link>
       </div>
     </div>
   );

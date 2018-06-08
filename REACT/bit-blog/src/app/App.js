@@ -1,35 +1,30 @@
-import React, {
-    Component
-} from 'react';
-import Header from './partials/Header';
-import HomePage from './home/HomePage';
-import Footer from './partials/Footer';
+import React, { Component } from "react";
+import Header from "./partials/Header";
+import HomePage from "./home/HomePage";
+import Footer from "./partials/Footer";
 import { Switch, Route } from "react-router-dom";
-import AuthorsPage from "./authors/AuthorsPage"
+import AuthorsPage from "./authors/AuthorsPage";
 import AboutPage from "./about/AboutPage";
-import SinglePostPage from "./singlePost/SinglePostPage"
-import AuthorPage from './author/AuthorPage';
+import SinglePostPage from "./singlePost/SinglePostPage";
+import AuthorPage from "./author/AuthorPage";
 
 class App extends Component {
-    render() {
-        return (
-            <div>
-                <Header />
-                <Switch>
-                    <Route exact path="/" component={HomePage} />
-                    <Route exact path="/authors" component={AuthorsPage} />
-                    <Route exact path="/about" component={AboutPage} />
-                    <Route exact path="/posts" component={SinglePostPage} />
-                    <Route exact path="/authors/:id" component={AuthorPage} />
+  render() {
+    return (
+      <div>
+        <Header />
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route exact path="/authors" component={AuthorsPage} />
+          <Route exact path="/about" component={AboutPage} />
+          <Route exact path="/posts/:id" component={SinglePostPage} />
+          <Route exact path="/authors/:id" component={AuthorPage} />
+        </Switch>
 
-
-                </Switch>
-
-                <Footer />
-
-            </div>
-        );
-    }
+        <Footer />
+      </div>
+    );
+  }
 }
 
 export default App;

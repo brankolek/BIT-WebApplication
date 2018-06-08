@@ -4,6 +4,27 @@ import {
 import Blog from "../entities/blog";
 class BlogService {
 
+    getBlogsFromAuthor() {
+
+
+        fetch("https://jsonplaceholder.typicode.com/posts?userId=5").then((response) => {
+            return response.json()
+        })
+
+    }
+
+    getBlogData(id) {
+
+        return (
+
+
+            fetch(`${blogsUrl}/posts/${id}`).then((response) => {
+                return response.json()
+            })
+        )
+
+    }
+
     getdata() {
 
 
@@ -15,7 +36,7 @@ class BlogService {
 
                 return data.map((blog) => {
 
-                    return new Blog(blog.userId, blog.title, blog.body)
+                    return new Blog(blog.userId, blog.id, blog.title, blog.body)
 
                 })
 

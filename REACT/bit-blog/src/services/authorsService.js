@@ -4,6 +4,18 @@ import {
 import Author from "../entities/author";
 class AuthorsService {
 
+
+    getUserData(id) {
+
+        return (
+
+
+            fetch(`${blogsUrl}/users/${id}`).then((response) => {
+                return response.json()
+            })
+        )
+
+    }
     getdata() {
 
 

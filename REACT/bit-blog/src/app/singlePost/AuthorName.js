@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import authorService from "../../services/authorsService";
+import { Link } from "react-router-dom"
 
 class AuthorName extends Component {
   constructor(props) {
@@ -16,7 +17,7 @@ class AuthorName extends Component {
     });
   }
   render() {
-    return <h2>{this.state.name}</h2>;
+    return <Link to={`/authors/${this.props.userId}`}><h3 className="text-center" >{this.state.name}</h3></Link>;
   }
 }
 

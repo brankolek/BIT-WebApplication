@@ -9,11 +9,15 @@ class BlogItem extends Component {
 
   render() {
     return (
-      <Link to={`/posts/${this.props.id}`}>
-        <li className="list-group-item list-group-item-action ">
-          <h2> {this.props.title} </h2>
-          <p> {this.props.text} </p>
-        </li>
+      <Link to={`/posts/${this.props.id}`} style={{ textDecoration: 'none' }}>
+        <div className="row justify-content-center">
+          <div className="col-6">
+            <li className="list-group-item list-group-item-action ">
+              <h2 className="ml-5" > {this.props.title.split(" ").slice(0, Math.ceil(Math.random() * 3)).join(" ")} </h2>
+              <p className="text-muted text-center"> {`${this.props.text.slice(0, 80)}...`} </p>
+            </li>
+          </div>
+        </div>
       </Link>
     );
   }

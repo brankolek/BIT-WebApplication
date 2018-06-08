@@ -32,7 +32,7 @@ class Author extends Component {
             <div >
 
 
-                <h1 className="text-center">AUTHORS</h1>
+                <h1 className="text-center mt-5">AUTHORS{`  (${this.state.authors.length})`}</h1>
                 <AuthorsList
 
                     authors={this.state.authors}

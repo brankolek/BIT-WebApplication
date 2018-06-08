@@ -27,28 +27,13 @@ class HomePage extends Component {
         return (
 
             <div className="container-fluid">
+                <Link to="/posts/new" >  <p className="text-left">New Blog</p></Link>
+                <h1 className="text-center my-3 display-4">Posts</h1>
 
-                <h1 className="text-center my-3">Posts</h1>
                 <BlogsList
                     blogs={this.state.blogs}
                 />
 
-                {/* <h1>POSTS</h1>
-
-                <Link to="/posts">
-                    <div>
-                        <h2>Title 1 </h2>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, consequatur.</p>
-                    </div>
-                </Link>
-                <div>
-                    <h2>Title 1 </h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, consequatur.</p>
-                </div>
-                <div>
-                    <h2>Title 1 </h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, consequatur.</p>
-                </div> */}
 
 
             </div>

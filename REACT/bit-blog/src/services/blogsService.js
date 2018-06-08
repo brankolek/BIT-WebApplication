@@ -4,10 +4,33 @@ import {
 import Blog from "../entities/blog";
 class BlogService {
 
-    getBlogsFromAuthor() {
+    postBlog(blog) {
+
+        return fetch('https://jsonplaceholder.typicode.com/posts', {
+            method: 'POST',
+            body: JSON.stringify(blog),
+            headers: {
+                "Content-type": "application/json; charset=UTF-8"
+            }
+        }).then(response => {
+
+            if (response.ok) {
+                return Promise.resolve(response)
+            } else {
+
+                return Promise.reject("Greska")
+            }
+        })
 
 
-        fetch("https://jsonplaceholder.typicode.com/posts?userId=5").then((response) => {
+
+
+    }
+
+    getBlogsFromAuthor(userId) {
+
+
+        return fetch(`${blogsUrl}/posts?userId=${userId}`).then((response) => {
             return response.json()
         })
 

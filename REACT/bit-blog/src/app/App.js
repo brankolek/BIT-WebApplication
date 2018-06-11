@@ -8,12 +8,13 @@ import AboutPage from "./about/AboutPage";
 import SinglePostPage from "./singlePost/SinglePostPage";
 import AuthorPage from "./author/AuthorPage";
 import CreateBlogPage from "./createBlog/CreateBlogPage";
+import "./styles/app.css"
 
 
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className="default">
         <Header />
         <Switch>
           <Route exact path="/" component={HomePage} />

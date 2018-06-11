@@ -1,15 +1,16 @@
 import React from "react";
+import "../styles/footer.css"
 
 const Footer = () => (
-  <footer className="bg-warning text-center footer">
-    Copyright(C) BIT June 2018
-  </footer>
+  // <footer className="bg-warning text-center footer">
+  //   
+  // </footer>
 
-  //   <footer class="footer">
-  //     <div class="container">
-  //       <span class="text-muted">Place sticky footer content here.</span>
-  //     </div>
-  //   </footer>
+  <footer className="footer">
+    <div class="container text-center">
+      <span class="text-muted">Copyright(C) BIT June 2018</span>
+    </div>
+  </footer>
 );
 
 export default Footer;

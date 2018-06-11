@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import "../styles/header.css"
 
 
 
@@ -7,9 +8,9 @@ import { Link } from "react-router-dom";
 
 const Header = () => (
 
-    <nav class="navbar navbar-light bg-warning">
+    <nav class="navbar navbar-light header">
 
-        <p>BIT BLOG</p>
+        <p className="text-primary">BIT BLOG</p>
         <ul className=" list-inline">
             <li class="list-inline-item border-right border-dark pr-3">
                 <Link to="/">Home</Link>
